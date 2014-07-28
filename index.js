@@ -6,12 +6,16 @@ exports.generateHulkenRequestsFile = function(path, server) {
     var hulken_requests = [];
     var table = server.table();
     for (var i = 0; i < table.length; i++) {
-      var hulken_req = {
-        method: table[i].method,
-        path: table[i].path,
-        expectedTextToExist: null
-      };
-      hulken_requests.push(hulken_req);
+
+      if(table[i].method === "get"){
+        var hulken_req = {
+          method: table[i].method,
+          path: table[i].path,
+          expectedTextToExist: null
+        };
+        hulken_requests.push(hulken_req);
+      }
+
     }
 
     fs.writeFile(path, JSON.stringify(
