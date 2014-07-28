@@ -8,13 +8,14 @@ this small module inspects your routes and generates a hulken requests file auto
 `npm install hulken_informant_hapi --save`
 ##Usage
 ```
-var app = express();
+var Hapi = require('hapi');
+var server = new Hapi.Server(3000);
 .
 .
 .
 .
 var hulkentInformant = require('hulken_informant_hapi');
- hulkenInformant.generateHulkenRequestsFile(‘./hulkenRequestsFile.json’, app);
+ hulkenInformant.generateHulkenRequestsFile(‘./hulkenRequestsFile.json’, server);
 ```
 an hulken_informant offers a quick and simple way to create a stress test suite by inspecting your application routes and auto generating the requests file for you!
 
