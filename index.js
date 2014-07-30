@@ -6,8 +6,7 @@ exports.generateHulkenRequestsFile = function(path, server) {
     var hulken_requests = [];
     var table = server.table();
     for (var i = 0; i < table.length; i++) {
-
-      if(table[i].method === "get"){
+      if (table[i].method === "get") {
         var hulken_req = {
           method: table[i].method,
           path: table[i].path,
@@ -20,12 +19,18 @@ exports.generateHulkenRequestsFile = function(path, server) {
 
     fs.writeFile(path, JSON.stringify(
       hulken_requests), function(err) {
-      if (err) throw err;
-      console.log(
-        'HulkenInformant created ' + path);
+      if (err) {
+        hulkenInformantFailed(err);
+      } else {
+        console.log(
+          'HulkenInformant created ' + path);
+      }
     });
   } catch (err) {
-    console.log('HulkenInformant failed: '.red + err.toString().red);
+    hulkenInformantFailed(err);
   }
-
 };
+
+function hulkenInformantFailed(err) {
+  console.log('HulkenInformant failed: '.red + err.toString().red);
+}
