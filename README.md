@@ -14,6 +14,7 @@ var server = new Hapi.Server(3000);
 .
 .
 .
+// do this after setting up your routes
 var hulkentInformant = require('hulken_informant_hapi');
  hulkenInformant.generateHulkenRequestsFile(‘./hulkenRequestsFile.json’, server);
 ```
