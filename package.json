@@ -1,7 +1,7 @@
 {
   "name": "hulken_informant_hapi",
-  "version": "0.0.5",
-  "description": "an informant for the stress test tool hulken (works with hapi.js)",
+  "version": "0.0.6",
+  "description": "an informant for the stress test tool hulken (works with hapi.js 7)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
