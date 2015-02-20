@@ -4,9 +4,11 @@ hulken_informant_hapi
 an informant for the stress test tool [hulken](https://github.com/hellgrenj/hulken) (works with hapi.js 7).  
 this small module inspects your routes and generates a hulken requests file automatically.
 
-##Installation
+## Installation
+
 `npm install hulken_informant_hapi --save`
-##Usage
+## Usage
+
 ```
 var Hapi = require('hapi');
 var server = new Hapi.Server(3000);
