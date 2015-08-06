@@ -17,7 +17,7 @@ var server = new Hapi.Server(3000);
 .
 .
 // do this after setting up your routes
-var hulkentInformant = require('hulken_informant_hapi');
+var hulkenInformant = require('hulken_informant_hapi');
  hulkenInformant.generateHulkenRequestsFile(‘./hulkenRequestsFile.json’, server);
 ```
 an hulken_informant offers a quick and simple way to create a stress test suite by inspecting your application routes and auto generating the requests file for you!
